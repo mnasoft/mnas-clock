@@ -61,7 +61,6 @@
 #+nil
 (min (window-width (first (all-windows))) (window-height (first (all-windows))))
 
-
 (defmethod render ((window simple-window))
   ;; Your GL context is automatically active.  FLUSH and
   ;; SDL2:GL-SWAP-WINDOW are done implicitly by GL-WINDOW
@@ -74,16 +73,15 @@
            (mm-l 1.2)
            (ss-l 1.4)
            (cl-sz 1.7)
-           (cl-tics 1.6)
-           )
+           (cl-tics 1.6))
       (gl:viewport (/ (- w sz) 2 ) (/ (- h sz) 2 ) sz sz )
    
       (gl:load-identity)
       (gl:rotate rotation 0 0 1)
-      (gl:clear-color 0.0 0.0 0.0 1.0)
+      (gl:clear-color 0.0 0.0 1.0 1.0)
       (gl:clear :color-buffer)
       (gl:begin :polygon)
-      (gl:color 1.0 1.0 1.0)
+      (gl:color 1.0 1.0 0.50)
       (loop :for i :from 0 :to 100 :do
         (gl:vertex (* cl-sz (sin (* *2pi* (/ i 100))))
                    (* cl-sz (cos (* *2pi* (/ i 100))))))
