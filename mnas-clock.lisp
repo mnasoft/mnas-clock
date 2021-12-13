@@ -58,9 +58,6 @@
   (gl:matrix-mode :modelview)
   (gl:load-identity))
 
-(min (window-width (first (all-windows))) (window-height (first (all-windows))))
-
-
 (defmethod render ((window simple-window))
   ;; Your GL context is automatically active.  FLUSH and
   ;; SDL2:GL-SWAP-WINDOW are done implicitly by GL-WINDOW
