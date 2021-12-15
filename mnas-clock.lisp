@@ -58,9 +58,6 @@
   (gl:matrix-mode :modelview)
   (gl:load-identity))
 
-#+nil
-(min (window-width (first (all-windows))) (window-height (first (all-windows))))
-
 (defun arrow (angle len s-w e-w)
   (let* ((p-0 '(0 0))
          (p-1 (vlisp:polar p-0 angle len))
