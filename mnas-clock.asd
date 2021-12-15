@@ -4,7 +4,10 @@
   :description "Clock Toy"
   :author "Nick Matvyeyev <mnasoft@gmail.com>"
   :license "MIT"
-  :version "0.0.2"
+  :version "0.0.3"
   :depends-on (:alexandria :sdl2kit :defpackage-plus :glkit :mathkit :vlisp)
   :serial t
-  :components ((:file "mnas-clock")))
+  :components ((:module "src"
+                :serial nil
+                :components ((:file "mnas-clock")))))
+
