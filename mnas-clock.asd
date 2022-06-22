@@ -2,7 +2,7 @@
 
 (defsystem "mnas-clock"
   :description "Clock Toy"
-  :author "Nick Matvyeyev <mnasoft@gmail.com>"
+  :author "Mykola Matvyeyev <mnasoft@gmail.com>"
   :license "MIT"
   :version "0.0.3"
   :depends-on (:alexandria :sdl2kit :defpackage-plus :glkit :mathkit :vlisp)
