@@ -1,12 +1,12 @@
 ;;;; mnas-clock.lisp
 
-(defpackage #:mnas-clock
+(defpackage :mnas-clock
   #+nil (:use #:cl)
   ;;#+nil
   (:use #:cl #:kit.sdl2 #:kit.gl.shader #:kit.math) ;; #:alexandria
   (:export #:make-simple-window))
   
-(in-package #:mnas-clock)
+(in-package :mnas-clock)
 
 (defparameter *pi*    (coerce pi         'single-float))
 (defparameter *2pi*   (coerce (* 2 pi)   'single-float))
