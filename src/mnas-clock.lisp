@@ -1,10 +1,12 @@
 ;;;; mnas-clock.lisp
 
 (defpackage :mnas-clock
-  #+nil (:use #:cl)
-  ;;#+nil
-  (:use #:cl #:kit.sdl2 #:kit.gl.shader #:kit.math) ;; #:alexandria
-  (:export #:make-simple-window))
+  (:use #:cl
+        #:kit.sdl2
+        #:kit.gl.shader
+        #:kit.math)
+  ;; #:alexandria
+  (:export #:clock))
   
 (in-package :mnas-clock)
 
@@ -179,14 +181,8 @@
   (format t "ID ~A, Button ~A, State ~S~%"
           (sdl2:game-controller-instance-id c) button state))
 
-(defun make-simple-window ()
+(defun clock ()
   (kit.sdl2:start)
   (make-instance 'simple-window))
 
-;; (make-instance 'simple-window)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;; (kit.sdl2:start)
-
-;;;;(make-instance 'simple-window)
+;;;;(mnas-clock:clock)
