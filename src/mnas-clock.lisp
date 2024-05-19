@@ -181,7 +181,8 @@
 
 (defun make-simple-window ()
   (kit.sdl2:start)
-  (make-instance 'simple-window))
+  (make-instance 'simple-window)
+  #+nil (sdl2:show-window (make-instance 'simple-window)))
 
 ;; (make-instance 'simple-window)
 
@@ -189,4 +190,10 @@
 
 ;;;; (kit.sdl2:start)
 
-;;;;(make-instance 'simple-window)
+;;;;
+#+nil
+(let ((win (make-instance 'simple-window)))
+  (sdl2:hide-window win)
+  (sdl2:show-window win))
+
+#+nil (make-simple-window)
